@@ -42,7 +42,7 @@ int main()
         }
     }
 
-    for(Node *print = head ; print != 0; print = print -> next){
+    for(Node *print = head ; print != nullptr; print = print -> next){
         cout << print -> data;
     }
 
