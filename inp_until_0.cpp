@@ -25,7 +25,7 @@ int main()
     while(zero){
 
         int val;
-        cout << "Enter the value of the linked list: ";
+        cout << "Enter a value of the linked list: ";
         cin >> val;
 
         if(val == 0){
