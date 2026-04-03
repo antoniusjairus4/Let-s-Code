@@ -25,7 +25,7 @@ int main()
     Node *tail = nullptr;
 
     for(int i = 0; i < n; i++){
-        cout << "Enter the value of the List: ";
+        cout << "Enter a value of the List: ";
         int val;
         cin >> val;
 
