@@ -2,7 +2,7 @@
 
 using namespace std;
 
-class Node {
+class Node{
     public:
         int data;
         Node *next;
@@ -17,17 +17,22 @@ class Node {
 
 int main()
 {
-    int n;
-    cout << "Enter the number of elements to be in the Linked list: ";
-    cin >> n;
-
     Node *head = nullptr;
     Node *tail = nullptr;
 
-    for(int i = 0; i < n; i++){
-        cout << "Enter a value of the List: ";
+    bool zero = true;
+
+    while(zero){
+
         int val;
+        cout << "Enter the value of the linked list: ";
         cin >> val;
+
+        if(val == 0){
+            cout << "You are exiting the iputs" << endl;
+            zero = false;
+            break;
+        }
 
         Node *new_Node = new Node (val);
 
@@ -37,19 +42,14 @@ int main()
         }
 
         else{
-            tail -> next = new_Node;
-            new_Node -> prev = tail;
+            tail->next = new_Node;
+            new_Node->prev = tail;
             tail = new_Node;
         }
     }
 
-    Node *max = head;
-    for(Node *trav = head ; trav != nullptr; trav = trav -> next){
-        if(max -> data > trav -> data){
-            max = trav;
-        }
+    for(Node *print = head; print != nullptr; print = print -> next){
+        cout << print -> data << " ";
     }
-
-    cout << "The max of the Linked list is: " << max;
     return 0;
 }
